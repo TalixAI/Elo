@@ -150,9 +150,17 @@ End
 
 In contributing to the development of Elo, you have the opportunity to:
 
-Shape the Future of AI: Be part of a project that has the potential to disrupt the AI industry and redefine AI infrastructure.
-Co-Founders Group: All contributors are eligible to participate in the exclusive co-founders group, sharing a 10% equity stake in the company. This is your chance to have a real stake in the future success of the project.
-Collaboration: Work alongside some of the brightest minds in AI and tech from leading companies in Silicon Valley and beyond.
+**Shape the Future of AI:**
+
+Be part of a project that has the potential to disrupt the AI industry and redefine AI infrastructure.
+
+**Co-Founders Group:**
+
+All contributors are eligible to participate in the exclusive co-founders group, sharing a 10% equity stake in the company. This is your chance to have a real stake in the future success of the project.
+
+**Collaboration:** 
+
+Work alongside some of the brightest minds in AI and tech from leading companies in Silicon Valley and beyond.
 Open Source Community: Join a thriving open-source community committed to innovation and excellence in AI.
 
 # How to Get Started
