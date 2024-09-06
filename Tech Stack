@@ -1,0 +1,31 @@
+Programming Languages:
+
+Python: Primary language for machine learning (ML) and AI development.
+Bash: For scripting and automation.
+SQL: For managing and querying databases.
+Frameworks and Libraries:
+
+TensorFlow/PyTorch: For building neural networks and deep learning models.
+Scikit-learn: For traditional ML algorithms like Random Forests, SVM, etc.
+Hugging Face Transformers: For attention mechanisms and NLP tasks.
+Django/Flask: For creating APIs to interact with the models.
+Celery: For task scheduling and distributed processing.
+Data Handling and Processing:
+
+Pandas and NumPy: For data manipulation and numerical operations.
+BeautifulSoup/Scrapy: For web scraping.
+Airflow: For orchestrating data pipelines.
+Infrastructure and Deployment:
+
+Docker: For containerizing applications.
+Kubernetes: For managing containerized applications.
+AWS/GCP/Azure: Cloud platforms for scalable deployment.
+Terraform: For infrastructure as code.
+Version Control and CI/CD:
+
+Git/GitHub/GitLab: For version control.
+Jenkins/GitLab CI: For continuous integration and deployment.
+
+Resource Management:
+Prometheus/Grafana: For monitoring and resource management.
+Ray/Dask: For parallel and distributed computing.
