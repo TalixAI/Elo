@@ -161,7 +161,10 @@ All contributors are eligible to participate in the exclusive co-founders group,
 **Collaboration:** 
 
 Work alongside some of the brightest minds in AI and tech from leading companies in Silicon Valley and beyond.
-Open Source Community: Join a thriving open-source community committed to innovation and excellence in AI.
+
+**Open Source Community:**
+
+Join a thriving open-source community committed to innovation and excellence in AI.
 
 # How to Get Started
 
