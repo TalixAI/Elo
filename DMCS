@@ -1,0 +1,122 @@
+Creating the Dynamic Memory and Context System:
+
+Create a new Python script, dynamic_memory_context_system.py:
+
+import numpy as np
+from collections import deque
+
+class DynamicMemoryContextSystem:
+    def __init__(self, memory_size=100):
+        self.memory = deque(maxlen=memory_size)
+
+    def store_context(self, context):
+        self.memory.append(context)
+
+    def retrieve_context(self):
+        if len(self.memory) > 0:
+            return list(self.memory)
+        else:
+            return None
+
+    def clear_memory(self):
+        self.memory.clear()
+
+# Example usage of DMCS
+if __name__ == "__main__":
+    dmcs = DynamicMemoryContextSystem(memory_size=5)
+
+    # Store some context data
+    for i in range(10):
+        context_data = np.random.rand(1, 512)
+        dmcs.store_context(context_data)
+        print(f"Stored context {i+1}: {context_data}")
+
+    # Retrieve and display all stored contexts
+    stored_contexts = dmcs.retrieve_context()
+    print("Retrieved Contexts:", stored_contexts)
+
+    # Clear the memory
+    dmcs.clear_memory()
+    print("Memory after clearing:", dmcs.retrieve_context())
+
+Explanation:
+
+The DMCS uses a deque (double-ended queue) to store a fixed amount of contextual information, which can be retrieved later. This approach allows the system to retain and manage historical data effectively without overwhelming memory resources.
+
+Integrating DMCS with AIM and OM:
+
+The DMCS will be integrated into the Adaptive Integration Model (AIM) to manage context during model operations.
+
+Modify adaptive_integration_model.py to include DMCS:
+
+from dynamic_memory_context_system import DynamicMemoryContextSystem
+
+class AdaptiveIntegrationModel:
+    def __init__(self):
+        self.loaded_models = {}
+        self.dhpm = DataHandlingPreprocessingModel()
+        self.dmcs = DynamicMemoryContextSystem()  # Initialize DMCS
+
+    def load_model(self, model_name):
+        if model_name not in self.loaded_models:
+            model_module = importlib.import_module(model_name)
+            self.loaded_models[model_name] = model_module.model
+            print(f"Model {model_name} loaded.")
+
+    def unload_model(self, model_name):
+        if model_name in self.loaded_models:
+            del self.loaded_models[model_name]
+            print(f"Model {model_name} unloaded.")
+
+    def run_model(self, model_name, data, token, store_context=False):
+        decoded_data, valid = verify_token(token)
+        if not valid:
+            return "Invalid Token"
+
+        if model_name in self.loaded_models:
+            model = self.loaded_models[model_name]
+
+            # Preprocess the data using DHPM
+            preprocessed_data = self.dhpm.preprocess(data)
+
+            # Retrieve stored context and combine with current data
+            context = self.dmcs.retrieve_context()
+            if context:
+                combined_data = np.concatenate((context[-1], preprocessed_data), axis=1)
+            else:
+                combined_data = preprocessed_data
+
+            predictions = model.predict(combined_data)
+
+            # Store context if needed
+            if store_context:
+                self.dmcs.store_context(preprocessed_data)
+
+            return predictions
+        else:
+            return f"Model {model_name} is not loaded."
+
+if __name__ == "__main__":
+    aim = AdaptiveIntegrationModel()
+    token = generate_token({'user': 'engineer'})
+
+    # Load the Foundation Model
+    aim.load_model('foundation_model')
+
+    # Simulate raw input data
+    raw_data = np.random.rand(10, 512)
+
+    # Run the Foundation Model with context storage
+    predictions = aim.run_model('foundation_model', raw_data, token, store_context=True)
+    print("Predictions:", predictions)
+
+    # Unload the Foundation Model
+    aim.unload_model('foundation_model')
+
+    # Check the stored context
+    stored_contexts = aim.dmcs.retrieve_context()
+    print("Stored Contexts:", stored_contexts)
+
+Testing the Contextual System:
+
+Run the adaptive_integration_model.py script and observe how the system retains and utilizes context in model predictions. This is particularly useful for models that require sequential data or need to understand the context from previous inputs.
