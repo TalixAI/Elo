@@ -1,0 +1,75 @@
+Creating the Token Management Model:
+
+Create a new Python script, token_management_model.py:
+
+import jwt
+import datetime
+
+# Secret key for encoding and decoding tokens
+SECRET_KEY = 'your_secret_key'
+
+# Function to generate a token
+def generate_token(data, expiry_minutes=30):
+    expiry = datetime.datetime.utcnow() + datetime.timedelta(minutes=expiry_minutes)
+    token = jwt.encode({'exp': expiry, 'data': data}, SECRET_KEY, algorithm='HS256')
+    return token
+
+# Function to verify a token
+def verify_token(token):
+    try:
+        decoded = jwt.decode(token, SECRET_KEY, algorithms=['HS256'])
+        return decoded['data'], True
+    except jwt.ExpiredSignatureError:
+        return None, False
+    except jwt.InvalidTokenError:
+        return None, False
+
+# Example usage of the TMM
+if __name__ == "__main__":
+    # Generate a token
+    data = {'user_id': 1, 'role': 'engineer'}
+    token = generate_token(data)
+    print("Generated Token:", token)
+
+    # Verify the token
+    decoded_data, valid = verify_token(token)
+    if valid:
+        print("Token is valid, data:", decoded_data)
+    else:
+        print("Invalid or expired token")
+
+Explanation:
+
+We’re using the PyJWT library to handle token creation and verification. The TMM generates tokens with expiration times, ensuring that communications between models are secured.
+Installing Dependencies:
+
+Install PyJWT:
+
+pip install PyJWT
+Integrating TMM with OM:
+
+The next step is to integrate the TMM with the Orchestrator Model to secure the communication.
+
+Modify orchestrator_model.py to include TMM:
+
+from token_management_model import generate_token, verify_token
+
+@app.task
+def orchestrate_foundation_model(data, token):
+    decoded_data, valid = verify_token(token)
+    if not valid:
+        return "Invalid Token"
+    
+    # Process the data through the Foundation Model
+    predictions = fm_model.predict(data)
+    return predictions
+
+if __name__ == "__main__":
+    input_data = np.random.rand(10, 512)
+    
+    # Generate a token for secure communication
+    token = generate_token({'user': 'engineer'})
+    
+    # Orchestrate the Foundation Model task with token verification
+    result = orchestrate_foundation_model.delay(input_data, token)
+    print("Predictions:", result.get())
