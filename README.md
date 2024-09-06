@@ -37,7 +37,7 @@ Scalability: The lightweight nature of the networks ensures that the system rema
 
 # Orchestrator Model (OM)
 
-The OM manages the coordination and integration of subsequent models within Elo 2, optimizing resource allocation, token distribution, and overall system performance.
+The OM manages the coordination and integration of subsequent models within the Elo system, optimizing resource allocation, token distribution, and overall system performance.
 
 **(Architecture)**
 
