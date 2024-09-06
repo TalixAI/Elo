@@ -1,0 +1,101 @@
+Creating the Data Handling and Preprocessing Model:
+
+Create a new Python script, data_handling_preprocessing_model.py:
+
+import numpy as np
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+
+class DataHandlingPreprocessingModel:
+    def __init__(self):
+        self.scaler = StandardScaler()
+        self.pca = PCA(n_components=50)
+
+    def normalize_data(self, data):
+        return self.scaler.fit_transform(data)
+
+    def reduce_dimensions(self, data):
+        return self.pca.fit_transform(data)
+
+    def preprocess(self, data):
+        data = self.normalize_data(data)
+        data = self.reduce_dimensions(data)
+        return data
+
+# Example usage of DHPM
+if __name__ == "__main__":
+    dhpm = DataHandlingPreprocessingModel()
+
+    # Simulate some raw input data
+    raw_data = np.random.rand(100, 512)
+
+    # Preprocess the data
+    preprocessed_data = dhpm.preprocess(raw_data)
+    print("Preprocessed Data Shape:", preprocessed_data.shape)
+
+Explanation:
+
+The DHPM performs two key preprocessing steps: normalization (scaling the data) and dimensionality reduction using Principal Component Analysis (PCA).
+
+These steps ensure that the input data is optimized for model processing, reducing noise and improving efficiency.
+
+Integrating DHPM with AIM and OM:
+
+Now, we’ll incorporate the DHPM into the Adaptive Integration Model (AIM) so that data is preprocessed before being fed into any model.
+
+Modify adaptive_integration_model.py to include DHPM:
+
+from data_handling_preprocessing_model import DataHandlingPreprocessingModel
+
+class AdaptiveIntegrationModel:
+    def __init__(self):
+        self.loaded_models = {}
+        self.dhpm = DataHandlingPreprocessingModel()  # Initialize DHPM
+
+    def load_model(self, model_name):
+        if model_name not in self.loaded_models:
+            model_module = importlib.import_module(model_name)
+            self.loaded_models[model_name] = model_module.model
+            print(f"Model {model_name} loaded.")
+
+    def unload_model(self, model_name):
+        if model_name in self.loaded_models:
+            del self.loaded_models[model_name]
+            print(f"Model {model_name} unloaded.")
+
+    def run_model(self, model_name, data, token):
+        decoded_data, valid = verify_token(token)
+        if not valid:
+            return "Invalid Token"
+
+        if model_name in self.loaded_models:
+            model = self.loaded_models[model_name]
+
+            # Preprocess the data using DHPM
+            preprocessed_data = self.dhpm.preprocess(data)
+
+            predictions = model.predict(preprocessed_data)
+            return predictions
+        else:
+            return f"Model {model_name} is not loaded."
+
+if __name__ == "__main__":
+    aim = AdaptiveIntegrationModel()
+    token = generate_token({'user': 'engineer'})
+
+    # Load the Foundation Model
+    aim.load_model('foundation_model')
+
+    # Simulate raw input data
+    raw_data = np.random.rand(10, 512)
+
+    # Run the Foundation Model with preprocessed data
+    predictions = aim.run_model('foundation_model', raw_data, token)
+    print("Predictions:", predictions)
+
+    # Unload the Foundation Model
+    aim.unload_model('foundation_model')
+
+Testing the Full Pipeline:
+
+Run the modified adaptive_integration_model.py script to see the full pipeline in action, from loading a model, preprocessing data, running predictions, and finally unloading the model.
