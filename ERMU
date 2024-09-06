@@ -1,0 +1,145 @@
+Creating the Energy and Resource Management Unit:
+
+Create a new Python script, energy_resource_management_unit.py:
+
+import time
+
+class EnergyResourceManagementUnit:
+    def __init__(self):
+        self.active_models = []
+        self.model_power_states = {}
+
+    def activate_model(self, model_name):
+        if model_name not in self.active_models:
+            self.active_models.append(model_name)
+            self.model_power_states[model_name] = 'active'
+            print(f"Model {model_name} activated.")
+
+    def deactivate_model(self, model_name):
+        if model_name in self.active_models:
+            self.active_models.remove(model_name)
+            self.model_power_states[model_name] = 'inactive'
+            print(f"Model {model_name} deactivated.")
+
+    def monitor_resources(self):
+        print("Monitoring resource usage...")
+        # Simulate resource monitoring
+        for model_name in self.active_models:
+            # Example: Just logging the active state
+            print(f"Model {model_name} is {self.model_power_states[model_name]}")
+
+    def optimize_resources(self):
+        print("Optimizing resources...")
+        # Example of optimization: deactivate models that are not in use for a certain time
+        for model_name in list(self.active_models):
+            # Simulate checking usage
+            last_used_time = time.time()  # This would normally be a timestamp
+            current_time = time.time()
+            if current_time - last_used_time > 10:  # Assume 10 seconds is the threshold
+                self.deactivate_model(model_name)
+
+# Example usage of ERMU
+if __name__ == "__main__":
+    ermu = EnergyResourceManagementUnit()
+
+    # Activate some models
+    ermu.activate_model('foundation_model')
+    ermu.activate_model('orchestrator_model')
+
+    # Monitor resources
+    ermu.monitor_resources()
+
+    # Simulate some time passing
+    time.sleep(12)
+
+    # Optimize resources
+    ermu.optimize_resources()
+
+    # Monitor resources again
+    ermu.monitor_resources()
+
+Explanation:
+
+The ERMU manages the activation and deactivation of models, ensuring that only the necessary models are consuming resources at any given time.
+It includes basic resource monitoring and optimization, such as deactivating models that haven’t been used recently.
+Integrating ERMU with AIM and OM:
+
+The ERMU will be integrated into the Adaptive Integration Model (AIM) to manage resources whenever a model is loaded or unloaded.
+Modify adaptive_integration_model.py to include ERMU:
+
+from energy_resource_management_unit import EnergyResourceManagementUnit
+
+class AdaptiveIntegrationModel:
+    def __init__(self):
+        self.loaded_models = {}
+        self.dhpm = DataHandlingPreprocessingModel()
+        self.dmcs = DynamicMemoryContextSystem()
+        self.ermu = EnergyResourceManagementUnit()  # Initialize ERMU
+
+    def load_model(self, model_name):
+        if model_name not in self.loaded_models:
+            model_module = importlib.import_module(model_name)
+            self.loaded_models[model_name] = model_module.model
+            self.ermu.activate_model(model_name)  # Activate the model
+            print(f"Model {model_name} loaded.")
+
+    def unload_model(self, model_name):
+        if model_name in self.loaded_models:
+            self.ermu.deactivate_model(model_name)  # Deactivate the model
+            del self.loaded_models[model_name]
+            print(f"Model {model_name} unloaded.")
+
+    def run_model(self, model_name, data, token, store_context=False):
+        decoded_data, valid = verify_token(token)
+        if not valid:
+            return "Invalid Token"
+
+        if model_name in self.loaded_models:
+            model = self.loaded_models[model_name]
+
+            # Preprocess the data using DHPM
+            preprocessed_data = self.dhpm.preprocess(data)
+
+            # Retrieve stored context and combine with current data
+            context = self.dmcs.retrieve_context()
+            if context:
+                combined_data = np.concatenate((context[-1], preprocessed_data), axis=1)
+            else:
+                combined_data = preprocessed_data
+
+            predictions = model.predict(combined_data)
+
+            # Store context if needed
+            if store_context:
+                self.dmcs.store_context(preprocessed_data)
+
+            return predictions
+        else:
+            return f"Model {model_name} is not loaded."
+
+    def manage_resources(self):
+        self.ermu.optimize_resources()
+
+if __name__ == "__main__":
+    aim = AdaptiveIntegrationModel()
+    token = generate_token({'user': 'engineer'})
+
+    # Load the Foundation Model
+    aim.load_model('foundation_model')
+
+    # Simulate raw input data
+    raw_data = np.random.rand(10, 512)
+
+    # Run the Foundation Model
+    predictions = aim.run_model('foundation_model', raw_data, token)
+    print("Predictions:", predictions)
+
+    # Unload the Foundation Model
+    aim.unload_model('foundation_model')
+
+    # Manage resources
+    aim.manage_resources()
+
+Testing the ERMU Integration:
+
+Run the adaptive_integration_model.py script to test the integration of ERMU. Observe how models are activated and deactivated, and how resources are optimized over time.
