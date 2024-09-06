@@ -176,10 +176,6 @@ Join a thriving open-source community committed to innovation and excellence in 
 
 **Join the Discussion:** Participate in discussions, propose new ideas, and collaborate with other contributors.
 
-# Documentation
-
-Comprehensive documentation is available in the Docs folder. Please refer to it for detailed information on the Percival System architecture, the Pii model, and how to contribute.
-
 # License
 
 This project is licensed under the Apache 2.0 License. See the LICENSE file for details.
