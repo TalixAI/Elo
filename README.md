@@ -5,11 +5,11 @@ An autonomous AI system that evolves towards AGI
 
 The path to AGI should be forged by the people who will be affected by it most, not the corporations who stand with the most to gain. 
 
-This repository presents the design and implementation of the Elo system, a foundational AI architecture designed to acheive AGI and produce higher quality outputs than mainstream large language models. Elo is the first version of 6 unique and highly advanced architectures with each iteration being more powerful than the last. We will gradually release every version over the next few years until our rollout is complete ending with the release our most powerful system which can reason with the capabilities of a genius level human being. 
+This repository presents the design of the Elo system, a foundational AI architecture designed to acheive AGI and produce higher quality outputs than mainstream large language models. Elo is the first version of 6 unique and highly advanced architectures with each iteration being more powerful than the last. We will gradually release every version over the next few years until our rollout is complete ending with the release our most powerful system which can reason with the capabilities of a genius level human being. 
 
 This specific architecture combines modular design, parallel processing, and dynamic resource management to balance flexibility, scalability, and energy efficiency. The system’s architecture is explored in detail, highlighting its seven key components: the Foundation Model (FM), Orchestrator Model (OM), Token Management Model (TMM), Adaptive Integration Model (AIM), Data Handling and Preprocessing Model (DHPM), Dynamic Memory and Context System (DMCS), and Energy and Resource Management Unit (ERMU). 
 
-To help you understand the operations flow of the system, we provide a comprehensive walkthrough of how Elo prepares a case thesis for a workplace discrimination claim but the system can be easily adapted to handle tasks in any domain and you will find out how as you explore further. 
+From our research this combination of modules can increase pattern recognition and natural language processing by an immense degree. We urge you to contribute and see for yourself.
 
 # Architecture of Elo
 
@@ -84,7 +84,7 @@ AIM is responsible for integrating specialized models, enabling the system to le
 
 **(Advantages)**
 
-Parallel Processing: By operating models in parallel, AIM reduces integration complexity and enhances efficiency.
+Parallel Processing: Because models operate in parallel, AIM reduces integration complexity and enhances efficiency.
 
 Specialized Knowledge: AIM’s use of multiple models allows the system to draw on a wide range of expertise.
 
@@ -102,7 +102,7 @@ DHPM ensures that the system has access to up-to-date, well-formatted data, supp
 
 **(Advantages)**
 
-Increased Knowledge Depth: By continuously collecting and preprocessing data, DHPM supports robust system growth.
+Increased Knowledge Depth: As the system continuously collects and preprocesses data, DHPM supports robust system growth.
 
 Reduced Development Time: The DHPM’s preprocessing capabilities reduce the time required to deploy new models.
 
@@ -125,6 +125,7 @@ Continuous Learning: DMCS enables the system to learn incrementally from new dat
 Contextual Awareness: The system can apply past knowledge to new tasks, enhancing its ability to handle dynamic, real-world scenarios effectively.
 
 # Energy and Resource Management Unit (ERMU)
+
 ERMU manages the system’s energy consumption and computational resources, dynamically adjusting the operation of other components to optimize performance and minimize energy use.
 
 **(Architecture)**
@@ -139,9 +140,41 @@ ERMU ensures that the system remains energy-efficient by dynamically managing th
 
 **(Advantages)**
 
-Energy Efficiency: By reducing energy consumption during low-demand periods, ERMU helps minimize operational costs and environmental impact.
+Energy Efficiency: Due to reducing energy consumption during low-demand periods, ERMU helps minimize operational costs and environmental impact.
 
 Computational Strain Reduction: ERMU’s dynamic resource management reduces the strain on hardware, prolonging the system's lifespan and enhancing overall performance.
 
-# End
+End
 
+# Why Contribute?
+
+In contributing to the development of Elo, you have the opportunity to:
+
+Shape the Future of AI: Be part of a project that has the potential to disrupt the AI industry and redefine AI infrastructure.
+Co-Founders Group: All contributors are eligible to participate in the exclusive co-founders group, sharing a 10% equity stake in the company. This is your chance to have a real stake in the future success of the project.
+Collaboration: Work alongside some of the brightest minds in AI and tech from leading companies in Silicon Valley and beyond.
+Open Source Community: Join a thriving open-source community committed to innovation and excellence in AI.
+
+# How to Get Started
+
+**Fork** the Repository:** Start by forking this repository to your GitHub account.
+
+**Explore the Code:** Dive into the codebase and get familiar with the Elo architecture
+
+**Contribute:** Submit your contributions via pull requests. We welcome everything from bug fixes and optimizations to new features and models.
+
+**Join the Discussion:** Participate in discussions, propose new ideas, and collaborate with other contributors.
+
+# Documentation
+
+Comprehensive documentation is available in the Docs folder. Please refer to it for detailed information on the Percival System architecture, the Pii model, and how to contribute.
+
+# License
+
+This project is licensed under the Apache 2.0 License. See the LICENSE file for details.
+
+# Contact
+
+For any questions or inquiries, please reach out to me @kenhanson27@gmail.com
+
+You belong with us in this exciting journey to push the boundaries of AI! Together, we can make Elo the cornerstone of the next AI revolution.
