@@ -1,0 +1,78 @@
+Here we'll be configuring Docker for containerization and then move on to Kubernetes for orchestration.
+
+Setting Up Docker:
+
+Create a Dockerfile to define your application's environment. Here’s a basic example for a Python application:
+
+# Use an official Python runtime as a parent image
+FROM python:3.9-slim
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the current directory contents into the container at /app
+COPY . /app
+
+# Install any needed packages specified in requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Make port 80 available to the world outside this container
+EXPOSE 80
+
+# Define environment variable
+ENV NAME World
+
+# Run app.py when the container launches
+CMD ["python", "app.py"]
+
+Building the Docker Image:
+
+docker build -t elo-system .
+Running the Docker Container:
+
+docker run -p 4000:80 elo-system
+
+Setting Up Kubernetes:
+
+Install kubectl (the Kubernetes command-line tool) and minikube for a local Kubernetes cluster.
+
+Install kubectl:
+
+sudo apt-get install -y kubectl
+Install minikube:
+
+curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+chmod +x minikube
+sudo mv minikube /usr/local/bin/
+
+Starting a Kubernetes Cluster:
+
+minikube start
+
+Deploying the Docker Container to Kubernetes:
+
+First, create a deployment configuration:
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: elo-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: elo
+  template:
+    metadata:
+      labels:
+        app: elo
+    spec:
+      containers:
+      - name: elo
+        image: elo-system
+        ports:
+        - containerPort: 80
+
+Apply the configuration:
+
+kubectl apply -f deployment.yaml
