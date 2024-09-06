@@ -1,0 +1,61 @@
+This covers how to install Python and its package manager, pip. You’ll also need virtualenv to create isolated environments for your projects.
+
+Installing Python and pip:
+
+For Ubuntu:
+
+sudo apt update
+sudo apt install python3 python3-pip
+
+For macOS (using Homebrew):
+
+brew install python3
+
+Setting up a Virtual Environment:
+
+Install virtualenv:
+
+pip3 install virtualenv
+
+Create a virtual environment:
+
+virtualenv elo_env
+
+Activate the virtual environment:
+
+On Linux/macOS:
+
+source elo_env/bin/activate
+
+On Windows:
+
+elo_env\Scripts\activate
+
+Installing Docker:
+
+Docker allows you to containerize the application for easy deployment.
+
+For Ubuntu:
+
+sudo apt install docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+
+For macOS, download Docker Desktop from Docker’s website and follow the installation instructions.
+
+Installing Git:
+
+Version control is crucial for collaborative development.
+
+For Ubuntu:
+
+sudo apt install git
+
+For macOS:
+
+brew install git
+
+
+
+
+
