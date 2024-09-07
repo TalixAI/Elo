@@ -79,6 +79,7 @@ The TMM works in tandem with the OM to monitor, evaluate, and adjust token usage
 **(Advantages)**
 
 Increased System Performance: By managing tokens efficiently, the TMM helps maintain optimal performance across all tasks.
+
 Error Detection: The TMM’s algorithms are designed to detect and correct errors in token allocation.
 
 # Adaptive Integration Model (AIM)
@@ -123,11 +124,15 @@ DMCS functions as the system's memory center, enabling incremental learning and 
 
 **(Architecture)**
 
-Recurrent Neural Network (RNN): DMCS is built on an RNN optimized for memory efficiency, allowing it to store and recall contextual information over time. DMCS leverages the capabilities of RNNs, particularly Long Short-Term Memory (LSTM) networks, to manage temporal dependencies and maintain contextual information over extended periods. This architecture is crucial for tasks requiring the retention of information across multiple interactions.
+Recurrent Neural Network (RNN): DMCS is built on an RNN optimized for memory efficiency, allowing it to store and recall contextual information over time. DMCS leverages the capabilities of RNNs, particularly Long Short-Term Memory (LSTM) networks, to manage temporal dependencies and maintain contextual information over extended periods. 
+
+This architecture is crucial for tasks requiring the retention of information across multiple interactions.
 
 **(Function)**
 
-DMCS is responsible for maintaining the system's memory of past interactions and contextualizing new inputs based on this historical data. This enables the system to provide more nuanced and contextually aware outputs, crucial for tasks that require an understanding of complex, evolving situations such as legal case preparation.
+DMCS is responsible for maintaining the system's memory of past interactions and contextualizing new inputs based on this historical data. 
+
+This enables the system to provide more nuanced and contextually aware outputs, crucial for tasks that require an understanding of complex, evolving situations such as legal case preparation.
 
 **(Advantages)**
 
@@ -141,7 +146,9 @@ ERMU manages the system’s energy consumption and computational resources, dyna
 
 **(Architecture)**
 
-Rule-Based Algorithms: ERMU combines rule-based algorithms with machine learning techniques to manage resources efficiently. The rule-based component ensures predictable behavior, while machine learning allows for adaptive responses to varying workloads.
+Rule-Based Algorithms: ERMU combines rule-based algorithms with machine learning techniques to manage resources efficiently. 
+
+The rule-based component ensures predictable behavior, while machine learning allows for adaptive responses to varying workloads.
 
 Dynamic Scaling: ERMU uses dynamic scaling techniques to adjust the power states of different models based on their current workload, allowing for significant reductions in energy consumption during periods of low demand.
 
