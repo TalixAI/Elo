@@ -1,5 +1,5 @@
 # Elo
-An autonomous AI system that evolves towards AGI
+An advanced AI system focused on towards AGI
 
 # Abstract
 
