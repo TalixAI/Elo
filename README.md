@@ -62,6 +62,7 @@ The OM’s primary role is to oversee the entire system, ensuring that each mode
 **(Advantages)**
 
 Optimized System Performance: The OM serves to efficiently manage resources and tasks while also ensuring that the system operates at peak performance.
+
 Automated Functioning: The OM’s advanced algorithms allow it to function with minimal human intervention.
 
 # Token Management Model (TMM)
