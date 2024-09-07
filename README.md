@@ -11,7 +11,9 @@ Elo is a series of 6 unique and highly advanced architectures with each iteratio
 
 We will gradually release every version over the next few years until our rollout is complete ending with the release our most powerful system which can reason with the capabilities far beyond any genius level human being. 
 
-This specific architecture combines modular design, parallel processing, and dynamic resource management to balance flexibility, scalability, and energy efficiency. The system’s architecture is explored in detail, highlighting its seven key components: 
+This specific architecture combines modular design, parallel processing, and dynamic resource management to balance flexibility, scalability, and energy efficiency.
+
+The system’s architecture is explored in detail, highlighting its seven key components: 
 
 The Foundation Model (FM), Orchestrator Model (OM), Token Management Model (TMM), Adaptive Integration Model (AIM), Data Handling and Preprocessing Model (DHPM), Dynamic Memory and Context System (DMCS), and Energy and Resource Management Unit (ERMU). 
 
