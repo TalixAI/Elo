@@ -1,5 +1,5 @@
 # Elo
-An advanced AI system focused on towards AGI
+An advanced AI system focused on AGI
 
 # Abstract
 
