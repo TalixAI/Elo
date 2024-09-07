@@ -19,7 +19,9 @@ From our research this combination of modules can increase pattern recognition a
 
 # Architecture of Elo
 
-Elo is built on the principles of modularity, parallelism, and efficiency. The system is composed of seven key components, each serving a specific function to ensure optimal performance. Below, we describe each component and its role within the architecture.
+The system is composed of seven key components, each serving a specific function to ensure optimal performance.
+
+Below, we describe each component and its role within the architecture.
 
 # Foundation Model (FM)
 
