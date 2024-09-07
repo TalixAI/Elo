@@ -162,7 +162,7 @@ Energy Efficiency: Due to reducing energy consumption during low-demand periods,
 
 Computational Strain Reduction: ERMU’s dynamic resource management reduces the strain on hardware, prolonging the system's lifespan and enhancing overall performance.
 
-End
+**End**
 
 # Why Contribute?
 
