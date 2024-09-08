@@ -13,13 +13,13 @@ The Foundation Model (FM), Orchestrator Model (OM), Token Management Model (TMM)
 
 As you explore further you'll see how this architecture can achieve near AGI level capabilities and give you the opportunity to participate in its success.
 
-# Architecture of Elo
+### **Architecture of Elo**
 
 The system is composed of seven key components, each serving a specific function to ensure optimal performance.
 
 Below, we describe each component and its role within the architecture.
 
-# Foundation Model (FM)
+### **Foundation Model (FM)**
 
 The FM serves as the core learning module, providing the base understanding and context for all tasks. It is designed with a modular approach, allowing it to adapt to new tasks or domains without extensive retraining. The FM uses lightweight neural networks with attention mechanisms, where each module within the FM can focus on a specific task or domain.
 
@@ -39,7 +39,7 @@ Flexibility: FM’s modular design allows for the easy addition of new tasks wit
 
 Scalability: The lightweight nature of the networks ensures that the system remains efficient even as the number of tasks increases.
 
-# Orchestrator Model (OM)
+### **Orchestrator Model (OM)**
 
 The OM manages the coordination and integration of subsequent models within the Elo system, optimizing resource allocation, token distribution, and overall system performance.
 
@@ -59,7 +59,7 @@ Optimized System Performance: The OM serves to efficiently manage resources and 
 
 Automated Functioning: The OM’s advanced algorithms allow it to function with minimal human intervention.
 
-# Token Management Model (TMM)
+### **Token Management Model (TMM)**
 
 The TMM handles the complexities of token distribution, allocation, and optimization within the system.
 
@@ -76,7 +76,7 @@ Increased System Performance: By managing tokens efficiently, the TMM helps main
 
 Error Detection: The TMM’s algorithms are designed to detect and correct errors in token allocation.
 
-# Adaptive Integration Model (AIM)
+### **Adaptive Integration Model (AIM)**
 
 AIM integrates multiple learning models to provide specialized knowledge and advanced pattern recognition.
 
@@ -112,7 +112,7 @@ Increased Knowledge Depth: As the system continuously collects and preprocesses 
 
 Reduced Development Time: The DHPM’s preprocessing capabilities reduce the time required to deploy new models.
 
-# Dynamic Memory and Context System (DMCS)
+### **Dynamic Memory and Context System (DMCS)**
 
 DMCS functions as the system's memory center, enabling incremental learning and contextual understanding.
 
@@ -134,7 +134,7 @@ Continuous Learning: DMCS enables the system to learn incrementally from new dat
 
 Contextual Awareness: The system can apply past knowledge to new tasks, enhancing its ability to handle dynamic, real-world scenarios effectively.
 
-# Energy and Resource Management Unit (ERMU)
+### **Energy and Resource Management Unit (ERMU)**
 
 ERMU manages the system’s energy consumption and computational resources, dynamically adjusting the operation of other components to optimize performance and minimize energy use.
 
