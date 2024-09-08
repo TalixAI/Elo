@@ -286,4 +286,4 @@ This project is licensed under the Apache 2.0 License. See the LICENSE file for 
 
 For any questions or inquiries, please reach out to me @kenhanson27@gmail.com
 
-You belong with us in this exciting journey to push the boundaries of AI! Together, we can make Elo the cornerstone of the next AI revolution.
+Gratam novam intelligentiae aetatem
