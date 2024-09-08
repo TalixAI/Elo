@@ -3,21 +3,15 @@ An advanced AI system focused on AGI
 
 **Abstract**
 
-The path to AGI should be forged by the people who will be affected by it most, not the corporations who stand with the most to gain. 
-
-This repository presents the design for version 1 of the Elo system, a foundational AI architecture designed to acheive AGI and produce higher quality outputs than mainstream large language models. 
-
 Elo is a series of 6 unique and highly advanced architectures with each iteration being more powerful than the last. 
 
-We will gradually release every version over the next few years until our rollout is complete ending with the release our most powerful system which can reason with the capabilities far beyond any genius level human being. 
-
-This specific architecture combines modular design, parallel processing, and dynamic resource management to balance flexibility, scalability, and energy efficiency.
+This specific architecture (Elo v1.0) combines modular design, parallel processing, and dynamic resource management to produce a high performing system that has world changing implications.
 
 The system’s architecture is explored in detail, highlighting its seven key components: 
 
 The Foundation Model (FM), Orchestrator Model (OM), Token Management Model (TMM), Adaptive Integration Model (AIM), Data Handling and Preprocessing Model (DHPM), Dynamic Memory and Context System (DMCS), and Energy and Resource Management Unit (ERMU). 
 
-As you explore further you'll see how this architecture can achieve near AGI capabilities.
+As you explore further you'll see how this architecture can achieve near AGI level capabilities and give you the opportunity to participate in its success.
 
 # Architecture of Elo
 
