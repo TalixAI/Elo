@@ -156,8 +156,6 @@ Energy Efficiency: Due to reducing energy consumption during low-demand periods,
 
 Computational Strain Reduction: ERMU’s dynamic resource management reduces the strain on hardware, prolonging the system's lifespan and enhancing overall performance.
 
-**End**
-
 # How Elo Advances Artificial Intelligence 
 
 The Elo system advances artificial intelligence architectures with evolutionary computing principles from several domains into a unified, adaptable architecture. This section explores how the system’s design contributes to the evolution of these computing paradigms and its potential impact on achieving AGI.
