@@ -1,7 +1,7 @@
 # Elo
 An advanced AI system focused on AGI
 
-# Abstract
+**Abstract**
 
 The path to AGI should be forged by the people who will be affected by it most, not the corporations who stand with the most to gain. 
 
@@ -25,7 +25,7 @@ The system is composed of seven key components, each serving a specific function
 
 Below, we describe each component and its role within the architecture.
 
-# Foundation Model (FM)
+**Foundation Model (FM)**
 
 The FM serves as the core learning module, providing the base understanding and context for all tasks. It is designed with a modular approach, allowing it to adapt to new tasks or domains without extensive retraining. The FM uses lightweight neural networks with attention mechanisms, where each module within the FM can focus on a specific task or domain.
 
