@@ -270,13 +270,13 @@ Join a thriving open-source community committed to innovation and excellence in 
 ### **How to Get Started**
 
 
-**Fork the Repository:** Start by forking this repository to your GitHub account.
+Fork the Repository: Start by forking this repository to your GitHub account.
 
-**Explore the Code:** Dive into the codebase and get familiar with the Elo architecture
+Explore the Code: Dive into the codebase and get familiar with the Elo architecture
 
-**Contribute:** Submit your contributions via pull requests. We welcome everything from bug fixes and optimizations to new features and models.
+Contribute: Submit your contributions via pull requests. We welcome everything from bug fixes and optimizations to new features and models.
 
-**Join the Discussion:** Participate in discussions, propose new ideas, and collaborate with other contributors.
+Join the Discussion: Participate in discussions, propose new ideas, and collaborate with other contributors.
 
 ### **License**
 
