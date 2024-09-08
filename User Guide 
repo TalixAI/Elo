@@ -279,4 +279,284 @@ allocation_strategy: round_robin
 
 **Overview:**
 
-The Adaptive Integration Model (AIM) integrates multiple learning models to provide specialized
+The Adaptive Integration Model (AIM) integrates multiple learning models to provide specialized knowledge and advanced pattern recognition. It supports a hierarchical structure that allows for the fusion of various models, such as Random Forest, Support Vector Machines (SVM), and Deep Neural Networks (DNN).
+
+**Key Features:**
+
+- **Hierarchical Model Fusion:** Combines the strengths of various models to handle complex tasks.
+- **Parallel Processing:** Executes models in parallel to improve efficiency and reduce processing time.
+- **Specialized Knowledge:** Leverages the unique capabilities of different models for enhanced decision-making.
+
+**Usage:**
+
+To use the AIM, you can import it and integrate multiple models as needed:
+
+```python
+from elo_system.adaptive_integration_model import AdaptiveIntegrationModel
+
+# Initialize AIM with configuration
+config = "config/adaptive_integration_model.yaml"
+aim = AdaptiveIntegrationModel(config)
+
+# Register models to be integrated
+aim.register_model("random_forest", RandomForestModel())
+aim.register_model("svm", SVMModel())
+aim.register_model("dnn", DNNModel())
+
+# Perform a prediction using the integrated models
+input_data = load_input_data("data/input_data.csv")
+predictions = aim.predict(input_data)
+```
+
+**Configuration:**
+
+The `config/adaptive_integration_model.yaml` file allows you to configure the integration strategy and the specific models to be used:
+
+```yaml
+integration_strategy: weighted_ensemble
+models:
+  - name: random_forest
+    weight: 0.4
+  - name: svm
+    weight: 0.3
+  - name: dnn
+    weight: 0.3
+```
+
+### **Data Handling and Preprocessing Model (DHPM)**
+
+**Overview:**
+
+The Data Handling and Preprocessing Model (DHPM) is responsible for collecting, preprocessing, and managing datasets to ensure they are ready for integration into the system. It uses advanced data extraction and transformation techniques to prepare data for model training and predictions.
+
+**Key Features:**
+
+- **Web Scraping and Extraction:** Automatically gathers data from various sources, including the web.
+- **Data Transformation:** Preprocesses data to ensure it is clean, well-formatted, and suitable for use.
+- **Automated Pipeline:** Streamlines the data handling process, reducing the need for manual intervention.
+
+**Usage:**
+
+To use the DHPM, import it and start the data handling process:
+
+```python
+from elo_system.data_handling_preprocessing_model import DataHandlingPreprocessingModel
+
+# Initialize DHPM with configuration
+config = "config/data_handling_preprocessing_model.yaml"
+dhpm = DataHandlingPreprocessingModel(config)
+
+# Start data collection and preprocessing
+dhpm.collect_data("https://example.com/dataset")
+preprocessed_data = dhpm.preprocess_data("raw_data.csv")
+```
+
+**Configuration:**
+
+Modify the `config/data_handling_preprocessing_model.yaml` file to adjust the data handling process:
+
+```yaml
+data_sources:
+  - type: web_scraping
+    url: "https://example.com/dataset"
+preprocessing_steps:
+  - step: normalize
+  - step: remove_nulls
+  - step: tokenize
+```
+
+### **Dynamic Memory and Context System (DMCS)**
+
+**Overview:**
+
+The Dynamic Memory and Context System (DMCS) acts as the memory center of the Elo System, enabling incremental learning and contextual understanding. It is designed to manage temporal dependencies and maintain contextual information across multiple interactions.
+
+**Key Features:**
+
+- **Recurrent Neural Networks (RNNs):** Utilizes LSTM networks for efficient memory management.
+- **Contextual Awareness:** Applies past knowledge to new tasks, enhancing the system's ability to understand complex situations.
+- **Incremental Learning:** Allows the system to learn continuously from new data without requiring full retraining.
+
+**Usage:**
+
+To implement DMCS, import it and integrate it into your task pipeline:
+
+```python
+from elo_system.dynamic_memory_context_system import DynamicMemoryContextSystem
+
+# Initialize DMCS with configuration
+config = "config/dynamic_memory_context_system.yaml"
+dmcs = DynamicMemoryContextSystem(config)
+
+# Store and retrieve context information
+dmcs.store_context("session_1", context_data)
+contextual_output = dmcs.retrieve_context("session_1", new_input_data)
+```
+
+**Configuration:**
+
+Adjust the `config/dynamic_memory_context_system.yaml` file to configure the memory settings:
+
+```yaml
+memory_type: LSTM
+memory_size: 1024
+context_window: 5
+```
+
+### **Energy and Resource Management Unit (ERMU)**
+
+**Overview:**
+
+The Energy and Resource Management Unit (ERMU) optimizes the system’s energy consumption and resource usage. It dynamically adjusts the power states and resource allocation based on the current workload to ensure energy efficiency and reduce computational strain.
+
+**Key Features:**
+
+- **Rule-Based Algorithms:** Combines rule-based logic with machine learning techniques for efficient resource management.
+- **Dynamic Scaling:** Adjusts the power states of different models based on their current demand.
+- **Energy Efficiency:** Minimizes operational costs and environmental impact by optimizing energy usage.
+
+**Usage:**
+
+To deploy ERMU, import it and manage the system’s resources:
+
+```python
+from elo_system.energy_resource_management_unit import EnergyResourceManagementUnit
+
+# Initialize ERMU with configuration
+config = "config/energy_resource_management_unit.yaml"
+ermu = EnergyResourceManagementUnit(config)
+
+# Monitor and adjust resource usage
+ermu.monitor_resources()
+ermu.optimize_energy_usage()
+```
+
+**Configuration:**
+
+The `config/energy_resource_management_unit.yaml` file allows you to set up energy management policies:
+
+```yaml
+scaling_strategy: dynamic
+max_power_state: high_performance
+min_power_state: low_power
+```
+
+---
+
+## **4. Advanced Configuration**
+
+### **Customizing Components**
+
+Each component within the Elo System is highly customizable, allowing you to tailor the system to your specific needs. This section will guide you through the process of modifying configurations, integrating new models, and scaling the system.
+
+**Customization Overview:**
+
+1. **Foundation Model (FM):** Add or remove neural network modules based on the specific tasks you need to perform.
+2. **Orchestrator Model (OM):** Customize resource allocation algorithms to prioritize critical tasks.
+3. **Token Management Model (TMM):** Adjust token allocation strategies for different components.
+4. **Adaptive Integration Model (AIM):** Integrate new models or change the weighting of existing ones to improve accuracy.
+5. **Data Handling and Preprocessing Model (DHPM):** Configure new data sources and preprocessing steps.
+6. **Dynamic Memory and Context System (DMCS):** Adjust memory size and context windows for different use cases.
+7. **Energy and Resource Management Unit (ERMU):** Fine-tune energy policies to balance performance and efficiency.
+
+### **Integrating New Models**
+
+The Elo System is designed to be extensible, allowing you to integrate new models into the Adaptive Integration Model (AIM) or other components. Here's how you can add a new model:
+
+1. **Develop the Model:**
+   - Implement the new model using your preferred machine learning framework (e.g., TensorFlow, PyTorch).
+   - Ensure that the model's API is compatible with the AIM's interface.
+
+2. **Register the Model in AIM:**
+   - Update the AIM configuration to include the new model.
+
+```yaml
+models:
+  - name: new_model
+    path: models/new_model.py
+    weight: 0.25
+```
+
+3. **Train and Deploy the Model:**
+   - Train the new model using the available training data.
+   - Deploy the model within the AIM for integration with other models.
+
+### **Scaling the System**
+
+As your usage of the Elo System grows, you may need to scale it to handle increased workloads. This can involve scaling up individual components or the entire system.
+
+**Horizontal Scaling:** Deploy additional instances of components like the Foundation Model or Orchestrator Model to distribute the workload across multiple servers.
+
+**Vertical Scaling:** Increase the computational resources (CPU, memory) allocated to the existing components to improve performance.
+
+**Kubernetes Scaling:** Use Kubernetes' auto-scaling capabilities to automatically adjust the number of pods based on demand.
+
+---
+
+## **5. CI/CD Pipeline Setup**
+
+### **Configuring CI/CD**
+
+The Elo System supports continuous integration and continuous deployment (CI/CD) to streamline the development and deployment process. This section will guide you through setting up a CI/CD pipeline using GitHub Actions, Jenkins, or other tools.
+
+**GitHub Actions:**
+
+1. **Create a `.github/workflows/ci-cd.yml` file:**
+
+```yaml
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+      - name: Run tests
+        run: |
+          pytest
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Kubernetes
+        run: |
+          helm upgrade --install elo ./helm/elo
+```
+
+2. **Set Up Secrets:**
+   - Add necessary secrets to your GitHub repository (e.g., Kubernetes credentials).
+
+**Jenkins:**
+
+1. **Create a Jenkins Pipeline Script:**
+
+```groovy
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    sh 'pip install -r requirements.txt'
+                }
+            }
+        }
+        stage('Test') {
+            steps {
+                script {
+                    sh '
