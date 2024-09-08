@@ -188,6 +188,8 @@ Evolutionary computing principles are reflected in the Adaptive Integration Mode
 
 The Elo system’s adaptable architecture allows it to perform tasks across a wide range of domains, from legal advice and healthcare to financial services and software development. The Elo design is flexible enough to autonomously execute tasks, regardless of the subject matter.
 
+Here's how the system would work in some key industries.
+
 #### **Legal Domain: Case Thesis Preparation**
 
 In the legal domain, the Elo system can be used to prepare a case thesis for a defense against workplace discrimination. The process involves several key steps:
@@ -196,7 +198,7 @@ In the legal domain, the Elo system can be used to prepare a case thesis for a d
 3. **Contextual Application**: DMCS applies past legal cases and contextual knowledge to refine the thesis preparation.
 4. **Resource Optimization**: ERMU manages computational resources, ensuring efficient processing of legal documents and case analysis.
 
-**Simulation Results**: The Elo 2 system demonstrates high effectiveness in analyzing complex legal cases, identifying relevant precedents, and preparing a coherent defense thesis. This capability is due to its modular design and integration of specialized models.
+**Simulation Results**: The Elo system demonstrates high effectiveness in analyzing complex legal cases, identifying relevant precedents, and preparing a coherent defense thesis. This capability is due to its modular design and integration of specialized models.
 
 #### **Healthcare Domain: Cancer Treatment Planning**
 
