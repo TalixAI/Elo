@@ -269,6 +269,7 @@ Join a thriving open-source community committed to innovation and excellence in 
 
 ### **How to Get Started**
 
+
 **Fork the Repository:** Start by forking this repository to your GitHub account.
 
 **Explore the Code:** Dive into the codebase and get familiar with the Elo architecture
