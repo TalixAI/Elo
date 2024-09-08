@@ -1,4 +1,4 @@
-Cchoose a CI/CD tool. Popular choices include Jenkins, GitLab CI/CD, Travis CI, and CircleCI. The choice often depends on your existing tech stack. Since we're using Docker and Kubernetes, GitLab CI/CD integrates well.
+Choose a CI/CD tool. Popular choices include Jenkins, GitLab CI/CD, Travis CI, and CircleCI. The choice often depends on your existing tech stack. Since we're using Docker and Kubernetes, GitLab CI/CD integrates well.
 
 Steps:
 
