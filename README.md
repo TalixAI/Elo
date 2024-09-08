@@ -94,7 +94,7 @@ Parallel Processing: Because models operate in parallel, AIM reduces integration
 
 Specialized Knowledge: AIM’s use of multiple models allows the system to draw on a wide range of expertise.
 
-# Data Handling and Preprocessing Model (DHPM)
+### **Data Handling and Preprocessing Model (DHPM)**
 
 DHPM collects and preprocesses datasets to ensure they are ready for integration into the system.
 
@@ -156,7 +156,7 @@ Energy Efficiency: Due to reducing energy consumption during low-demand periods,
 
 Computational Strain Reduction: ERMU’s dynamic resource management reduces the strain on hardware, prolonging the system's lifespan and enhancing overall performance.
 
-# How Elo Advances Artificial Intelligence 
+### **How Elo Advances Artificial Intelligence**
 
 The Elo system advances artificial intelligence architectures with evolutionary computing principles from several domains into a unified, adaptable architecture. This section explores how the system’s design contributes to the evolution of these computing paradigms and its potential impact on achieving AGI.
 
@@ -247,7 +247,7 @@ AGI requires the integration of knowledge across various domains. Elo’s AIM al
 
 The use of evolutionary strategies in the OM and AIM allows the Elo system to optimize its performance continuously. In selecting and combining the best traits from different models and strategies, Elo evolves to meet the demands of increasingly complex tasks, bringing it closer to the capabilities of AGI.
 
-# Why Contribute?
+### **Why Contribute?**
 
 In contributing to the development of Elo, you have the opportunity to:
 
@@ -267,7 +267,7 @@ Work alongside some of the brightest minds in AI and tech from leading companies
 
 Join a thriving open-source community committed to innovation and excellence in AI.
 
-# How to Get Started
+### **How to Get Started**
 
 **Fork the Repository:** Start by forking this repository to your GitHub account.
 
@@ -277,11 +277,11 @@ Join a thriving open-source community committed to innovation and excellence in 
 
 **Join the Discussion:** Participate in discussions, propose new ideas, and collaborate with other contributors.
 
-# License
+### **License**
 
 This project is licensed under the Apache 2.0 License. See the LICENSE file for details.
 
-# Contact
+### **Contact**
 
 For any questions or inquiries, please reach out to me @kenhanson27@gmail.com
 
