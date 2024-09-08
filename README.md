@@ -190,7 +190,7 @@ In the legal domain, the Elo system can be used to prepare a case thesis for a d
 3. **Contextual Application**: DMCS applies past legal cases and contextual knowledge to refine the thesis preparation.
 4. **Resource Optimization**: ERMU manages computational resources, ensuring efficient processing of legal documents and case analysis.
 
-**Simulation Results**: The Elo system demonstrates high effectiveness in analyzing complex legal cases, identifying relevant precedents, and preparing a coherent defense thesis. This capability is due to its modular design and integration of specialized models.
+In this scenario the Elo system demonstrates high effectiveness in analyzing complex legal cases, identifying relevant precedents, and preparing a coherent defense thesis. This capability is due to its modular design and integration of specialized models.
 
 #### **Healthcare Domain: Cancer Treatment Planning**
 
@@ -200,7 +200,7 @@ In healthcare, the Elo system can develop effective cancer treatment plans and p
 3. **Contextual Application**: DMCS uses historical patient data and contextual medical knowledge to refine treatment recommendations.
 4. **Resource Optimization**: ERMU ensures that computational resources are used efficiently, especially when processing large datasets like medical images and genomic sequences.
 
-**Simulation Results**: Elo provides highly personalized and effective treatment plans, demonstrating its ability to process and integrate complex medical data while continuously improving its recommendations based on new patient information.
+In this scenario Elo provides highly personalized and effective treatment plans, demonstrating its ability to process and integrate complex medical data while continuously improving its recommendations based on new patient information.
 
 #### **Financial Domain: Investment Optimization**
 
@@ -210,7 +210,7 @@ In the financial domain, the Elo system can be employed to create software that 
 3. **Contextual Application**: DMCS applies historical market data and contextual financial knowledge to optimize investment strategies.
 4. **Resource Optimization**: ERMU manages computational resources to ensure real-time analysis and decision-making, especially during high-frequency trading.
 
-**Simulation Results**: The Elo system successfully maximizes investment profits by dynamically adapting to market conditions and optimizing trading strategies based on real-time data and historical trends.
+In this scenario the Elo system successfully maximizes investment profits by dynamically adapting to market conditions and optimizing trading strategies based on real-time data and historical trends.
 
 ### **Comparative Analysis**
 
