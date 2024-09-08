@@ -216,7 +216,7 @@ In this scenario the Elo system successfully maximizes investment profits by dyn
 
 To evaluate the overall ability of the Elo system, we compare it against two leading AI systems: ChatGPT and Google’s Gemini. The comparison is based on a rating scale of one to ten across several key dimensions: adaptability, domain-specific performance, efficiency, scalability, and potential for achieving AGI.
 
-| **Criteria**                   | **Elo ** | **ChatGPT** | **Google Gemini** |
+| **Criteria**                   | Elo  | **ChatGPT** | **Google Gemini** |
 |--------------------------------|-----------|-------------|-------------------|
 | **Adaptability**               | 9         | 7           | 8                 |
 | **Domain-Specific Performance**| 9         | 8           | 8                 |
@@ -231,7 +231,7 @@ To evaluate the overall ability of the Elo system, we compare it against two lea
 - **Scalability**: Elo’s cloud-based model export and dynamic integration allow it to scale more effectively, supporting a vast network of specialized models.
 - **Potential for AGI**: Elo’s continuous learning and adaptability make it a strong candidate for achieving AGI, surpassing current capabilities of ChatGPT and Gemini.
 
-### **Towards Achieving AGI**
+### **Getting Closer To AGI**
 
 The Elo system represents a significant step towards achieving AGI due to its ability to autonomously execute tasks across various domains, adapt continuously, and optimize its performance through evolutionary and neural computing principles. This section discusses how Elo’s design and operational dynamics contribute to the pursuit of AGI.
 
