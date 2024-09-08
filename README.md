@@ -178,7 +178,7 @@ Evolutionary computing principles are reflected in the Adaptive Integration Mode
 
 ### **Implications Across Multiple Domains**
 
-The Elo system’s adaptable architecture allows it to autonomously perform tasks across a wide range of domains, from legal advice and healthcare to financial services and software development. 
+The Elo system’s adaptable architecture allows it to autonomously perform tasks across a wide range of domains, from legal advice and healthcare to financial services and software development. To add a custom model simply train on the appropriate dataset and integrate into the system.
 
 Here's how the system would work in these vital industries.
 
