@@ -1,4 +1,4 @@
-if# Elo
+# Elo
 An advanced AI system focused on AGI
 
 **Abstract**
