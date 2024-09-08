@@ -17,7 +17,7 @@ The system’s architecture is explored in detail, highlighting its seven key co
 
 The Foundation Model (FM), Orchestrator Model (OM), Token Management Model (TMM), Adaptive Integration Model (AIM), Data Handling and Preprocessing Model (DHPM), Dynamic Memory and Context System (DMCS), and Energy and Resource Management Unit (ERMU). 
 
-From our research this combination of modules can increase pattern recognition and natural language processing by an immense degree. We urge you to contribute and see for yourself.
+As you explore further you'll see how this architecture can achieve near AGI capabilities.
 
 # Architecture of Elo
 
@@ -188,7 +188,7 @@ Evolutionary computing principles are reflected in the Adaptive Integration Mode
 
 The Elo system’s adaptable architecture allows it to perform tasks across a wide range of domains, from legal advice and healthcare to financial services and software development. The Elo design is flexible enough to autonomously execute tasks, regardless of the subject matter.
 
-#### **4.1 Legal Domain: Case Thesis Preparation**
+#### **Legal Domain: Case Thesis Preparation**
 
 In the legal domain, the Elo system can be used to prepare a case thesis for a defense against workplace discrimination. The process involves several key steps:
 1. **Task Initialization**: The OM interacts with the FM to establish a foundational understanding of legal principles relevant to workplace discrimination.
@@ -208,7 +208,7 @@ In healthcare, the Elo system can develop effective cancer treatment plans and p
 
 **Simulation Results**: Elo provides highly personalized and effective treatment plans, demonstrating its ability to process and integrate complex medical data while continuously improving its recommendations based on new patient information.
 
-#### **4.3 Financial Domain: Investment Optimization**
+#### **Financial Domain: Investment Optimization**
 
 In the financial domain, the Elo system can be employed to create software that maximizes investment profits for a financial company. The process involves:
 1. **Task Initialization**: The OM establishes a foundational understanding of financial markets, investment strategies, and risk management.
@@ -218,7 +218,7 @@ In the financial domain, the Elo system can be employed to create software that 
 
 **Simulation Results**: The Elo system successfully maximizes investment profits by dynamically adapting to market conditions and optimizing trading strategies based on real-time data and historical trends.
 
-### **5. Comparative Analysis**
+### **Comparative Analysis**
 
 To evaluate the overall ability of the Elo system, we compare it against two leading AI systems: ChatGPT and Google’s Gemini. The comparison is based on a rating scale of one to ten across several key dimensions: adaptability, domain-specific performance, efficiency, scalability, and potential for achieving AGI.
 
