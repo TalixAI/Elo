@@ -5,7 +5,7 @@ An advanced AI system focused on AGI
 
 Elo is a series of 6 unique and highly advanced architectures with each iteration being more powerful than the last. 
 
-This specific architecture (Elo v1.0) combines modular design, parallel processing, and dynamic resource management to produce a high performing system that has world changing implications.
+This specific architecture **(Elo v1.0)** combines modular design, parallel processing, and dynamic resource management to produce a high performing system that has world changing implications.
 
 The system’s architecture is explored in detail, highlighting its seven key components: 
 
