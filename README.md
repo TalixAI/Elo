@@ -9,7 +9,7 @@ This specific architecture **(Elo v1.0)** combines modular design, parallel proc
 
 The system’s architecture is explored in detail, highlighting its seven key components: 
 
-The Foundation Model **(FM)**, Orchestrator Model **(OM), Token Management Model **(TMM)**, Adaptive Integration Model **(AIM)**, Data Handling and Preprocessing Model **(DHPM)**, Dynamic Memory and Context System **(DMCS)**, and Energy and Resource Management Unit **(ERMU)**. 
+The Foundation Model **(FM)**, Orchestrator Model **(OM)**, Token Management Model **(TMM)**, Adaptive Integration Model **(AIM)**, Data Handling and Preprocessing Model **(DHPM)**, Dynamic Memory and Context System **(DMCS)**, and Energy and Resource Management Unit **(ERMU)**. 
 
 As you explore further you'll see how this architecture can achieve near AGI level capabilities and give you the opportunity to participate in its success.
 
