@@ -89,8 +89,8 @@ Before installing the Elo System, ensure that your environment meets the followi
 Clone the Elo System repository from GitHub:
 
 ```bash
-git clone https://github.com/your-username/elo-system.git
-cd elo-system
+git clone https://github.com/talix-ai/elo.git
+cd elo
 ```
 
 #### **Step 2: Install Dependencies**
