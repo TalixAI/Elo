@@ -5,7 +5,7 @@ AI Vulnerability Detection Model
 
 Elo is a versatile AI model that can provide secure, real-time, vulnerability identification and patching.
 
-Elo is designed to autonomously detect, analyze, and patch vulnerabilities in artificial intelligence models no matter the size or scale. Elo's modular design combines advanced machine learning algorithms with an emphasis on real-time, energy-efficient performance, making it ideal for complex tasks that require advanced reasoning abilities.
+Elo is designed to autonomously detect, analyze, and patch vulnerabilities in artificial intelligence models no matter the size or scale. Elo's modular design combines advanced machine learning algorithms with an emphasis on real-time, energy-efficient performance, making it ideal for complex tasks that require significant reasoning ability.
 
 **Elo’s Key Capabilities:**
 
