@@ -1,5 +1,5 @@
 # Elo
-AI Vulnerability Detection Model 
+SOTA AI Vulnerability Detection Model 
 
 **Abstract**
 
