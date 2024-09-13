@@ -31,7 +31,7 @@ The system is particularly beneficial for industries adopting AI at scale, where
 
 **Other Use Cases**
 
-Elo doesn’t stop at vulnerability detection. The system modular architecture is customizable enough to handle complex task across a variety of domains without major system reconfiguration completely advancing a forward thinking direction in artificial intelligence.
+Elo doesn’t stop at vulnerability detection. The system's modular architecture is customizable enough to handle complex task across a variety of domains without major system reconfiguration completely advancing a forward thinking direction in artificial intelligence.
 
 **How Elo Advances Artificial Intelligence**
 
