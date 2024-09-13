@@ -88,18 +88,17 @@ Before installing the Elo System, ensure that your environment meets the followi
 
 Clone the Elo System repository from GitHub:
 
-```bash
 git clone https://github.com/talix-ai/elo.git
 cd elo
-```
+
 
 #### **Step 2: Install Dependencies**
 
 Ensure all necessary dependencies are installed. The repository includes a `requirements.txt` file for Python packages:
 
-```bash
+
 pip install -r requirements.txt
-```
+
 
 #### **Step 3: Set Up Docker and Kubernetes**
 
@@ -109,7 +108,6 @@ Make sure Docker and Kubernetes are installed and running on your system. You ca
 
 Build the Docker images for each of the Elo components:
 
-```bash
 docker build -t elo-foundation-model ./foundation-model
 docker build -t elo-orchestrator-model ./orchestrator-model
 docker build -t elo-tmm ./token-management-model
@@ -117,15 +115,14 @@ docker build -t elo-aim ./adaptive-integration-model
 docker build -t elo-dhpm ./data-handling-preprocessing-model
 docker build -t elo-dmcs ./dynamic-memory-context-system
 docker build -t elo-ermu ./energy-resource-management-unit
-```
+
 
 #### **Step 5: Deploy with Kubernetes**
 
 Use Helm to deploy the Elo System onto a Kubernetes cluster:
 
-```bash
 helm install elo ./helm/elo
-```
+
 
 ### **Initial Setup**
 
@@ -147,10 +144,9 @@ Customize these files as needed for your specific use case.
 
 Ensure that the necessary environment variables are set in your system. These can be defined in a `.env` file at the root of the project:
 
-```env
 DATABASE_URL=postgres://username:password@localhost:5432/elodb
 REDIS_URL=redis://localhost:6379/0
-```
+
 
 ---
 
@@ -170,7 +166,6 @@ The Foundation Model is the core learning module in the Elo System. It provides 
 
 To utilize the Foundation Model, import it into your Python scripts as follows:
 
-```python
 from elo_system.foundation_model import FoundationModel
 
 # Initialize the model with a specific configuration
@@ -184,7 +179,7 @@ fm.train(training_data)
 # Make predictions
 input_data = load_input_data("data/input_data.csv")
 predictions = fm.predict(input_data)
-```
+
 
 **Configuration:**
 
@@ -194,11 +189,10 @@ The Foundation Model can be configured via the `config/foundation_model.yaml` fi
 - **batch_size:** Number of samples per training batch.
 - **epochs:** Number of training epochs.
 
-```yaml
 learning_rate: 0.001
 batch_size: 32
 epochs: 10
-```
+
 
 ### **Orchestrator Model (OM)**
 
@@ -215,7 +209,6 @@ The Orchestrator Model is responsible for coordinating the operation of the enti
 
 To use the Orchestrator Model, import it and initialize it with your configuration:
 
-```python
 from elo_system.orchestrator_model import OrchestratorModel
 
 # Initialize with configuration
@@ -224,7 +217,6 @@ om = OrchestratorModel(config)
 
 # Start the orchestration process
 om.start()
-```
 
 **Configuration:**
 
@@ -233,13 +225,11 @@ Modify the `config/orchestrator_model.yaml` file to adjust the behavior of the O
 - **max_resources:** Maximum resources that can be allocated.
 - **task_priority:** Determines the priority of different tasks.
 
-```yaml
 max_resources: 100
 task_priority:
   - fm_training
   - tmm_allocation
   - data_preprocessing
-```
 
 ### **Token Management Model (TMM)**
 
@@ -254,7 +244,6 @@ The Token Management Model (TMM) is crucial for managing the complexities of tok
 
 **Usage:**
 
-```python
 from elo_system.token_management_model import TokenManagementModel
 
 # Initialize the TMM
@@ -264,16 +253,14 @@ tmm = TokenManagementModel(config)
 # Allocate tokens for a task
 task = "fm_training"
 tokens_allocated = tmm.allocate_tokens(task)
-```
 
 **Configuration:**
 
 Edit `config/token_management_model.yaml` to control the token allocation strategy:
 
-```yaml
 token_reserve: 20
 allocation_strategy: round_robin
-```
+
 
 ### **Adaptive Integration Model (AIM)**
 
@@ -291,7 +278,6 @@ The Adaptive Integration Model (AIM) integrates multiple learning models to prov
 
 To use the AIM, you can import it and integrate multiple models as needed:
 
-```python
 from elo_system.adaptive_integration_model import AdaptiveIntegrationModel
 
 # Initialize AIM with configuration
@@ -306,13 +292,11 @@ aim.register_model("dnn", DNNModel())
 # Perform a prediction using the integrated models
 input_data = load_input_data("data/input_data.csv")
 predictions = aim.predict(input_data)
-```
 
 **Configuration:**
 
 The `config/adaptive_integration_model.yaml` file allows you to configure the integration strategy and the specific models to be used:
 
-```yaml
 integration_strategy: weighted_ensemble
 models:
   - name: random_forest
@@ -321,7 +305,6 @@ models:
     weight: 0.3
   - name: dnn
     weight: 0.3
-```
 
 ### **Data Handling and Preprocessing Model (DHPM)**
 
@@ -339,7 +322,6 @@ The Data Handling and Preprocessing Model (DHPM) is responsible for collecting, 
 
 To use the DHPM, import it and start the data handling process:
 
-```python
 from elo_system.data_handling_preprocessing_model import DataHandlingPreprocessingModel
 
 # Initialize DHPM with configuration
@@ -349,13 +331,11 @@ dhpm = DataHandlingPreprocessingModel(config)
 # Start data collection and preprocessing
 dhpm.collect_data("https://example.com/dataset")
 preprocessed_data = dhpm.preprocess_data("raw_data.csv")
-```
 
 **Configuration:**
 
 Modify the `config/data_handling_preprocessing_model.yaml` file to adjust the data handling process:
 
-```yaml
 data_sources:
   - type: web_scraping
     url: "https://example.com/dataset"
@@ -363,7 +343,6 @@ preprocessing_steps:
   - step: normalize
   - step: remove_nulls
   - step: tokenize
-```
 
 ### **Dynamic Memory and Context System (DMCS)**
 
@@ -381,7 +360,6 @@ The Dynamic Memory and Context System (DMCS) acts as the memory center of the El
 
 To implement DMCS, import it and integrate it into your task pipeline:
 
-```python
 from elo_system.dynamic_memory_context_system import DynamicMemoryContextSystem
 
 # Initialize DMCS with configuration
@@ -391,17 +369,14 @@ dmcs = DynamicMemoryContextSystem(config)
 # Store and retrieve context information
 dmcs.store_context("session_1", context_data)
 contextual_output = dmcs.retrieve_context("session_1", new_input_data)
-```
 
 **Configuration:**
 
 Adjust the `config/dynamic_memory_context_system.yaml` file to configure the memory settings:
 
-```yaml
 memory_type: LSTM
 memory_size: 1024
 context_window: 5
-```
 
 ### **Energy and Resource Management Unit (ERMU)**
 
@@ -419,7 +394,6 @@ The Energy and Resource Management Unit (ERMU) optimizes the system’s energy c
 
 To deploy ERMU, import it and manage the system’s resources:
 
-```python
 from elo_system.energy_resource_management_unit import EnergyResourceManagementUnit
 
 # Initialize ERMU with configuration
@@ -429,17 +403,14 @@ ermu = EnergyResourceManagementUnit(config)
 # Monitor and adjust resource usage
 ermu.monitor_resources()
 ermu.optimize_energy_usage()
-```
 
 **Configuration:**
 
 The `config/energy_resource_management_unit.yaml` file allows you to set up energy management policies:
 
-```yaml
 scaling_strategy: dynamic
 max_power_state: high_performance
 min_power_state: low_power
-```
 
 ---
 
@@ -470,12 +441,10 @@ The Elo System is designed to be extensible, allowing you to integrate new model
 2. **Register the Model in AIM:**
    - Update the AIM configuration to include the new model.
 
-```yaml
 models:
   - name: new_model
     path: models/new_model.py
     weight: 0.25
-```
 
 3. **Train and Deploy the Model:**
    - Train the new model using the available training data.
@@ -511,7 +480,7 @@ Setting up a Continuous Integration/Continuous Deployment (CI/CD) pipeline is cr
 **Step 3: Define CI/CD Pipelines**
 - Create pipeline scripts (e.g., `.yml` files) that define the stages of your CI/CD process, including build, test, and deploy stages.
 - Example GitHub Actions workflow:
-  ```yaml
+  
   name: Elo CI/CD Pipeline
 
   on: [push, pull_request]
@@ -541,7 +510,6 @@ Setting up a Continuous Integration/Continuous Deployment (CI/CD) pipeline is cr
         - name: Deploy to Kubernetes
           run: |
             kubectl apply -f k8s_deployment.yaml
-  ```
 
 **Step 4: Environment Configuration**
 - Set up environment variables, secrets, and credentials within the CI/CD platform to securely manage sensitive data.
@@ -567,7 +535,7 @@ Automated testing ensures that changes to the Elo System do not introduce bugs o
 - Tools like `coverage.py` can help you track test coverage metrics.
 
 **Example: Running Tests in CI Pipeline**
-```yaml
+
 - name: Run Unit Tests
   run: |
     pytest --cov=elo_system tests/
@@ -579,7 +547,6 @@ Automated testing ensures that changes to the Elo System do not introduce bugs o
 - name: Run E2E Tests
   run: |
     pytest e2e_tests/
-```
 
 #### **5.3 Continuous Deployment**
 
@@ -597,7 +564,7 @@ Automated testing ensures that changes to the Elo System do not introduce bugs o
 - Automatically run post-deployment tests to validate that the system is functioning correctly after deployment.
 
 **Example: Continuous Deployment with Rollbacks**
-```yaml
+
 - name: Deploy to Production
   run: |
     helm upgrade --install elo-system ./charts/elo-system
@@ -605,7 +572,6 @@ Automated testing ensures that changes to the Elo System do not introduce bugs o
 - name: Validate Deployment
   run: |
     curl -f http://elo-system/health || helm rollback elo-system
-```
 
 ---
 
@@ -628,7 +594,7 @@ Once the Elo System is deployed, it is critical to monitor its performance, vali
 - Use logging frameworks like `log4j` for consistent log formatting and storage.
 
 **Example: Prometheus and Grafana Setup**
-```yaml
+
 - name: Deploy Prometheus
   run: |
     kubectl apply -f prometheus-deployment.yaml
@@ -636,7 +602,6 @@ Once the Elo System is deployed, it is critical to monitor its performance, vali
 - name: Deploy Grafana
   run: |
     kubectl apply -f grafana-deployment.yaml
-```
 
 #### **6.2 Model Validation**
 
@@ -652,7 +617,7 @@ Once the Elo System is deployed, it is critical to monitor its performance, vali
 - Configure alerts for when validation metrics fall below a defined threshold, signaling potential issues with the model.
 
 **Example: Model Validation Script**
-```python
+
 from sklearn.metrics import accuracy_score
 
 # Load validation data
@@ -671,7 +636,6 @@ print(f'Validation Accuracy: {accuracy}')
 # Trigger alert if accuracy is below threshold
 if accuracy < 0.90:
     trigger_alert("Model validation failed. Accuracy below threshold.")
-```
 
 #### **6.3 Performance Benchmarking**
 
@@ -688,7 +652,7 @@ if accuracy < 0.90:
 - Compare results over time to track performance trends.
 
 **Example: Performance Benchmarking with JMeter**
-```yaml
+
 - name: Run JMeter Tests
   run: |
     jmeter -n -t load_test.jmx -l results.jtl
@@ -696,7 +660,6 @@ if accuracy < 0.90:
 - name: Analyze Results
   run: |
     jmeter -g results.jtl -o report/
-```
 
 ---
 
@@ -720,7 +683,6 @@ To maintain and improve the Elo System, it is essential to implement feedback me
 
 **Example: Integrating User Feedback Collection**
 
-```python
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
@@ -739,7 +701,6 @@ def store_feedback(feedback):
 
 if __name__ == "__main__":
     app.run(port=5000)
-```
 
 #### **7.2 Automated Retraining**
 
@@ -757,7 +718,6 @@ if __name__ == "__main__":
 
 **Example: Automated Retraining Workflow**
 
-```yaml
 - name: Trigger Retraining
   run: |
     python retrain_model.py
@@ -773,7 +733,6 @@ if __name__ == "__main__":
     else
       echo "Retrained model did not meet performance criteria."
     fi
-```
 
 #### **7.3 A/B Testing**
 
@@ -791,7 +750,6 @@ if __name__ == "__main__":
 
 **Example: A/B Testing Setup**
 
-```yaml
 - name: Deploy A/B Versions
   run: |
     kubectl apply -f version_a_deployment.yaml
@@ -804,7 +762,6 @@ if __name__ == "__main__":
 - name: Analyze Results
   run: |
     python analyze_ab_results.py
-```
 
 ---
 
@@ -845,7 +802,6 @@ Despite thorough testing and validation, issues can arise. This section covers c
 
 **Example: Log Collection Script**
 
-```yaml
 - name: Collect Logs
   run: |
     kubectl logs deployment/elo-system > elo_system_logs.txt
@@ -853,7 +809,6 @@ Despite thorough testing and validation, issues can arise. This section covers c
 - name: Analyze Logs
   run: |
     grep -i "error" elo_system_logs.txt
-```
 
 ---
 
@@ -879,7 +834,6 @@ Following best practices ensures the security, performance, and maintainability 
 
 **Example: Security Configuration**
 
-```yaml
 - name: Scan for Vulnerabilities
   run: |
     pip install safety
@@ -888,7 +842,6 @@ Following best practices ensures the security, performance, and maintainability 
 - name: Rotate Secrets
   run: |
     aws secretsmanager rotate-secret --secret-id <SECRET_ID>
-```
 
 #### **9.2 Performance Optimization**
 
@@ -909,11 +862,9 @@ Following best practices ensures the security, performance, and maintainability 
 
 **Example: Resource Optimization in Kubernetes**
 
-```yaml
 - name: Configure Auto-scaling
   run: |
     kubectl autoscale deployment elo-system --min=1 --max=10 --cpu-percent=80
-```
 
 #### **9.3 System Maintenance**
 
@@ -934,7 +885,6 @@ Following best practices ensures the security, performance, and maintainability 
 
 **Example: Backup Automation**
 
-```yaml
 - name: Backup Database
   run: |
     pg_dump -U <username> -h <hostname> -d <database> > backup.sql
@@ -942,7 +892,6 @@ Following best practices ensures the security, performance, and maintainability 
 - name: Upload to S3
   run: |
     aws s3 cp backup.sql s3://<bucket_name>/backup.sql
-```
 
 ---
 
